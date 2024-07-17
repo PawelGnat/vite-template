@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2022", "dom"],
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "allowJs": true,
+    "checkJs": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@js/*": ["src/js/*"],
+      "@scss/*": ["src/scss/*"],
+      "@layout": ["src/layout/*"],
+      "@components/*": ["src/components/*"]
+    },
+    "types": ["vite/client"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "vite-env.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}

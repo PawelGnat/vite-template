@@ -1,0 +1,126 @@
+// ------------------------------
+// Mixins
+// ------------------------------
+// Include fonts
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: woff2 woff) {
+  $src: null;
+
+  @each $ext in $exts {
+    $format: $ext;
+    $src: append(
+      $src,
+      url(quote($fonts-directory + $path + '.' + $ext)) format(quote($format)),
+      comma
+    );
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+    font-display: swap;
+  }
+}
+
+// @Media
+@mixin media-max($breakpoint) {
+  @media (max-width: #{$breakpoint - 0.02px}) {
+    @content;
+  }
+}
+
+@mixin media-min($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-min-max($breakpoint-min, $breakpoint-max) {
+  @media (min-width: $breakpoint-min) and (max-width: #{$breakpoint-max - 0.02px}) {
+    @content;
+  }
+}
+
+// SVG Color
+@mixin svg-color($color) {
+  fill: $color;
+  color: $color;
+}
+
+// Aspect ratio
+@mixin aspect-ratio($percentage) {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    padding-top: $percentage;
+  }
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Resets list styles
+@mixin list-clear() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Reset input styles
+@mixin input-clear() {
+  outline: none;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+  appearance: none;
+}
+
+// Text ellipsis
+@mixin text-ellipsis($num) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+}
+
+// =============================================================================
+// Hover, Active, Focus ->  @include hover { };
+// =============================================================================
+@mixin hover {
+  &:hover,
+  &:active,
+  &:focus-within {
+    @content;
+  }
+}
+
+// Grid
+//1 Column mobile
+@mixin grid-sm-1-col($columnCount, $columnWidth, $gap) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap;
+  @include media-min($sm) {
+    grid-template-columns: repeat($columnCount, $columnWidth);
+  }
+}
+
+//2 Columns mobile
+@mixin grid-sm-2-col($columnCount, $columnWidth, $gap) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap;
+  @include media-min($sm) {
+    grid-template-columns: repeat($columnCount, $columnWidth);
+  }
+}

@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;   
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  
+}
+
+* {
+  &::before,
+  &::after {
+    speak: never;
+  }
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+em {
+  color: inherit;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+textarea {
+  overflow: auto;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
+
+
+
+

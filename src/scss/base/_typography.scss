@@ -1,0 +1,56 @@
+// ------------------------------------------------------------
+// @include font-face($name, $path, $weight: null, $style: null, $exts: woff2 woff);
+// Use only woff2, woff formats, both are required
+// Example: @include font-face('Font Name', $font-dir+'font-file-name', 400);
+// @include font-face('Open Sans', $open-sans-dir+'OpenSans-Regular', 400);
+// ------------------------------------------------------------
+// Default fonts directory
+
+$fonts-directory: 'fonts/';
+// $font-dir: "font-dir/";
+
+// example font-face
+@font-face {
+  font-display: swap;
+  font-family: 'WorkSans';
+  src: url($fonts-directory + 'WorkSans-Bold.eot');
+  src:
+    url($fonts-directory + 'WorkSans-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url($fonts-directory + 'WorkSans-Bold.woff2') format('woff2'),
+    url($fonts-directory + 'WorkSans-Bold.woff') format('woff'),
+    url($fonts-directory + 'WorkSans-Bold.ttf') format('truetype'),
+    url($fonts-directory + 'WorkSans-Bold.svg#WorkSans-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'WorkSans';
+  src: url($fonts-directory + 'WorkSans-Medium.eot');
+  src:
+    url($fonts-directory + 'WorkSans-Medium.eot?#iefix')
+      format('embedded-opentype'),
+    url($fonts-directory + 'WorkSans-Medium.woff2') format('woff2'),
+    url($fonts-directory + 'WorkSans-Medium.woff') format('woff'),
+    url($fonts-directory + 'WorkSans-Medium.ttf') format('truetype'),
+    url($fonts-directory + 'WorkSans-Medium.svg#WorkSans-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'WorkSans';
+  src: url($fonts-directory + 'WorkSans-Light.eot');
+  src:
+    url($fonts-directory + 'WorkSans-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url($fonts-directory + 'WorkSans-Light.woff2') format('woff2'),
+    url($fonts-directory + 'WorkSans-Light.woff') format('woff'),
+    url($fonts-directory + 'WorkSans-Light.ttf') format('truetype'),
+    url($fonts-directory + 'WorkSans-Light.svg#WorkSans-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}

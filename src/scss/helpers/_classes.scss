@@ -1,0 +1,27 @@
+.wrapper {
+  max-width: 100%;
+}
+
+.s-hidden {
+  @include media-max($sm) {
+    display: none;
+  }
+}
+
+.m-hidden {
+  @include media-max($md) {
+    display: none;
+  }
+}
+
+.l-hidden {
+  @include media-max($lg) {
+    display: none;
+  }
+}
+
+.xl-hidden {
+  @include media-max($xl) {
+    display: none;
+  }
+}

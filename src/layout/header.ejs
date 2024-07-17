@@ -1,0 +1,78 @@
+<header>
+  <div
+    id="header-wrapper-primary"
+    uk-sticky="show-on-up: true; animation: uk-animation-slide-top-small;">
+    <div class="nav-wrapper">
+      <a href="/" title="Strona Główna">
+        <img src="https://placehold.co/280x40" alt="Logotyp" />
+      </a>
+      <nav class="l-hidden" uk-dropnav="mode: click; animation: reveal-top">
+        <ul uk-tab>
+          <li class="uk-active"><a href="#">Active</a></li>
+          <li><a href="#">Menu Item</a></li>
+          <li><a href="#">Menu Item</a></li>
+          <li>
+            <a href="#">Parent <span uk-drop-parent-icon></span></a>
+            <div class="uk-dropdown">
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class=""><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Parent 1<span uk-drop-parent-icon></span></a>
+            <div class="uk-dropdown">
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class=""><a href="#">Active 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div uk-navbar class="uk-hidden@l">
+        <a
+          class="uk-navbar-toggle uk-navbar-toggle-animate"
+          uk-navbar-toggle-icon
+          href="#">
+        </a>
+        <div
+          id="mobile-menu"
+          class="mobile-menu uk-dropbar uk-dropbar-top uk-drop uk-hidden@l"
+          uk-drop="mode: click; stretch: x; target-y: .nav-wrapper; animation: reveal-top; animate-out: true">
+          <ul class="uk-flex uk-flex-column" uk-tab>
+            <li class=""><a href="#">Active</a></li>
+            <li><a href="#">Menu Item</a></li>
+            <li><a href="#">Menu Item</a></li>
+            <li>
+              <a href="#">Parent <span uk-drop-parent-icon></span></a>
+              <div class="uk-dropdown">
+                <ul
+                  class="uk-nav uk-dropdown-nav uk-flex uk-flex-middle uk-flex-column">
+                  <li class=""><a href="#">Active</a></li>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">Parent 1<span uk-drop-parent-icon></span></a>
+              <div class="uk-dropdown">
+                <ul
+                  class="uk-nav uk-dropdown-nav uk-flex uk-flex-middle uk-flex-column">
+                  <li class=""><a href="#">Active 1</a></li>
+                  <li><a href="#">Item 2</a></li>
+                  <li><a href="#">Item 3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,33 @@
+{
+  "name": "frontend-vite-build",
+  "private": true,
+  "version": "1.1.0",
+  "description": "UIKIT + SASS",
+  "author": "Artneo.pl",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --fix src/**/*.js",
+    "format": "prettier --plugin=prettier-plugin-ejs --write ."
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^5.2.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "3.1.1",
+    "prettier-plugin-ejs": "^0.0.19",
+    "sass": "^1.69.5",
+    "vite": "^5.0.8",
+    "vite-plugin-purgecss": "^0.2.12",
+    "terser": "^5.29.2"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "uikit": "^3.17.11",
+    "vite-plugin-ejs": "^1.7.0"
+  }
+}

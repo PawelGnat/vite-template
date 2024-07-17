@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pl" dir="ltr">
+  <head>
+    <%- include('./layout/head.ejs', {title: '404'}) %>
+  </head>
+
+  <body>
+    <%- include('./layout/header.ejs') %>
+
+    <main>
+      <h1>404 - Strona nie istnieje</h1>
+      <% include('./components/404/_404.ejs') %>
+    </main>
+
+    <%- include('./layout/footer.ejs') %>
+    <script type="module" defer src="./js/main.js"></script>
+  </body>
+</html>
